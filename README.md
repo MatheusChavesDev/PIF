@@ -42,6 +42,7 @@ Este repositório explora a introdução a dois dos principais paradigmas de lin
 - **Ambiente:** AWS Academy
 
 ## 📚 Bibliografia Principal
+* Victorine V. Mizrahi, Treinamento em linguagem C, Edição: 2.ed. Publicação: São Paulo : McGraw-Hill, 2014
 * SCHILDT, H. *C Completo e Total*.
 * THOMPSON, S. *Haskell: The Craft Of Functional Programming*.
 
