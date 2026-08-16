@@ -1,5 +1,5 @@
-#include <stdio.h>--> sem ";"
-#include <stdlib.h>;
+#include <stdio.h>
+#include <stdlib.h>; --> diretivas não terminam com ";"
 int Main{} --> usou "}" em vez de "()"
 ( --> deveria ser "{"
   printf( Existem %d semanas no ano.,52);--> não tem aspas ""
