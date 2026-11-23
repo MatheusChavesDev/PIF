@@ -1,16 +1,18 @@
 #include <stdio.h>
+#include <windows.h>
 
 int ehPar(int n);
 
 int main() {
+    SetConsoleOutputCP(CP_UTF8);
     int n;
-    printf("Digite um numero inteiro: ");
+    printf("Digite um número inteiro: ");
     scanf("%d", &n);
 
     if (ehPar(n)) {
-        printf("%d e par.\n", n);
+        printf("%d é par.\n", n);
     } else {
-        printf("%d e impar.\n", n);
+        printf("%d é ímpar.\n", n);
     }
     return 0;
 }

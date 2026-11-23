@@ -1,12 +1,14 @@
 #include <stdio.h>
+#include <windows.h>
 
 int maior(int a, int b);
 
 int main() {
+    SetConsoleOutputCP(CP_UTF8);
     int a, b;
-    printf("Digite o primeiro numero: ");
+    printf("Digite o primeiro número: ");
     scanf("%d", &a);
-    printf("Digite o segundo numero: ");
+    printf("Digite o segundo número: ");
     scanf("%d", &b);
 
     printf("Maior: %d\n", maior(a, b));

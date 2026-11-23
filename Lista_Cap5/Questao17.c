@@ -1,16 +1,18 @@
 #include <stdio.h>
+#include <windows.h>
 
 long fatorialIterativo(int n);
 long fatorialRecursivo(int n);
 
 int main() {
+    SetConsoleOutputCP(CP_UTF8);
     int n;
     long fi, fr;
-    printf("Digite um inteiro nao negativo: ");
+    printf("Digite um inteiro não negativo: ");
     scanf("%d", &n);
 
     if (n < 0) {
-        printf("Erro: O numero nao pode ser negativo.\n");
+        printf("Erro: O número não pode ser negativo.\n");
     } else {
         fi = fatorialIterativo(n);
         fr = fatorialRecursivo(n);
@@ -20,7 +22,7 @@ int main() {
         if (fi == fr) {
             printf("Os resultados coincidem.\n");
         } else {
-            printf("Os resultados sao diferentes.\n");
+            printf("Os resultados são diferentes.\n");
         }
     }
     return 0;

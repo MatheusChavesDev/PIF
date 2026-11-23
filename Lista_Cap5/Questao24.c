@@ -1,16 +1,18 @@
 #include <stdio.h>
+#include <windows.h>
 
-// Comente a linha abaixo para compilar sem o modo de depuracao
+// Comente a linha abaixo para compilar sem o modo de depuração
 #define DEBUG
 
 int somaAteN(int n);
 
 int main() {
+    SetConsoleOutputCP(CP_UTF8);
     int n;
-    printf("Digite um numero inteiro positivo: ");
+    printf("Digite um número inteiro positivo: ");
     scanf("%d", &n);
 
-    printf("Soma de 1 ate %d: %d\n", n, somaAteN(n));
+    printf("Soma de 1 até %d: %d\n", n, somaAteN(n));
     return 0;
 }
 
@@ -33,12 +35,12 @@ int somaAteN(int n) {
    [DEBUG] i = 2, soma parcial = 3
    [DEBUG] i = 3, soma parcial = 6
    [DEBUG] i = 4, soma parcial = 10
-   Soma de 1 ate 4: 10
+   Soma de 1 até 4: 10
 
  SEM #define DEBUG:
-   Soma de 1 ate 4: 10
+   Soma de 1 até 4: 10
 
- Sem o DEBUG, o pre-processador remove o printf de dentro do laco antes da
- compilacao, entao o programa mostra so o resultado final. O valor da soma
- e o mesmo nas duas versoes.
+ Sem o DEBUG, o pré-processador remove o printf de dentro do laço antes da
+ compilação, então o programa mostra só o resultado final. O valor da soma
+ é o mesmo nas duas versões.
 */

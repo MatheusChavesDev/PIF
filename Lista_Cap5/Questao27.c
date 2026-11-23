@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <windows.h>
 
 float celsiusParaFahrenheit(float c);
 float celsiusParaKelvin(float c);
@@ -6,6 +7,7 @@ float fahrenheitParaCelsius(float f);
 float kelvinParaCelsius(float k);
 
 int main() {
+    SetConsoleOutputCP(CP_UTF8);
     int opcao;
     float temp;
 
@@ -14,7 +16,7 @@ int main() {
     printf("2 - Celsius para Kelvin\n");
     printf("3 - Fahrenheit para Celsius\n");
     printf("4 - Kelvin para Celsius\n");
-    printf("Escolha a opcao: ");
+    printf("Escolha a opção: ");
     scanf("%d", &opcao);
 
     printf("Digite a temperatura: ");
@@ -25,7 +27,7 @@ int main() {
         case 2: printf("Resultado: %.2f K\n", celsiusParaKelvin(temp)); break;
         case 3: printf("Resultado: %.2f C\n", fahrenheitParaCelsius(temp)); break;
         case 4: printf("Resultado: %.2f C\n", kelvinParaCelsius(temp)); break;
-        default: printf("Erro: Opcao invalida!\n");
+        default: printf("Erro: Opção inválida!\n");
     }
     return 0;
 }

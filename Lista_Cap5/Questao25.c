@@ -1,15 +1,17 @@
 #include <stdio.h>
+#include <windows.h>
 
 int mdc(int a, int b);
 void simplifica(int num, int den);
 
 int main() {
+    SetConsoleOutputCP(CP_UTF8);
     int a, b;
     printf("Digite dois inteiros positivos: ");
     scanf("%d %d", &a, &b);
 
     if (a <= 0 || b <= 0) {
-        printf("Erro: Os numeros devem ser positivos.\n");
+        printf("Erro: Os números devem ser positivos.\n");
     } else {
         printf("MDC(%d, %d) = %d\n", a, b, mdc(a, b));
         simplifica(a, b);
@@ -18,7 +20,7 @@ int main() {
 }
 
 int mdc(int a, int b) {
-    // Caso base: quando b chega a 0, o MDC e o a
+    // Caso base: quando b chega a 0, o MDC é o a
     if (b == 0) {
         return a;
     }
@@ -28,5 +30,5 @@ int mdc(int a, int b) {
 
 void simplifica(int num, int den) {
     int m = mdc(num, den);
-    printf("Fracao %d/%d simplificada: %d/%d\n", num, den, num / m, den / m);
+    printf("Fração %d/%d simplificada: %d/%d\n", num, den, num / m, den / m);
 }

@@ -1,18 +1,20 @@
 #include <stdio.h>
+#include <windows.h>
 
 float calculaSubtotal(float preco, int quantidade);
 float aplicaDesconto(float valor, int opcaoPagamento);
 float calculaTroco(float total, float pago);
 
 int main() {
+    SetConsoleOutputCP(CP_UTF8);
     float preco, pago, subtotal, total;
     int quantidade, opcao;
 
-    printf("Digite o preco do produto: ");
+    printf("Digite o preço do produto: ");
     scanf("%f", &preco);
     printf("Digite a quantidade: ");
     scanf("%d", &quantidade);
-    printf("Forma de pagamento (1 - A vista | 2 - Cartao): ");
+    printf("Forma de pagamento (1 - À vista | 2 - Cartão): ");
     scanf("%d", &opcao);
 
     subtotal = calculaSubtotal(preco, quantidade);

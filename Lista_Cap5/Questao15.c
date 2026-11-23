@@ -1,14 +1,11 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <locale.h>
+#include <windows.h>
 
 float mediaPonderada(float n1, float n2, float n3);
 void exibeSituacao(float media);
 
 int main() {
-    system("cls");
-    setlocale(LC_ALL, ".UTF8");
-
+    SetConsoleOutputCP(CP_UTF8);
     float n1, n2, n3, media;
     printf("Digite a primeira nota (peso 2): ");
     scanf("%f", &n1);
@@ -31,7 +28,7 @@ void exibeSituacao(float media) {
     if (media >= 5.0) {
         printf("Aprovado\n");
     } else if (media >= 3.0) {
-        printf("Em Recuperacao\n");
+        printf("Em Recuperação\n");
     } else {
         printf("Reprovado\n");
     }

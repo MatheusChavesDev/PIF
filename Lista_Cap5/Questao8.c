@@ -1,8 +1,10 @@
 #include <stdio.h>
+#include <windows.h>
 
 float celsius(float fahr);
 
 int main() {
+    SetConsoleOutputCP(CP_UTF8);
     float f;
     printf("Digite a temperatura em Fahrenheit: ");
     scanf("%f", &f);

@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <windows.h>
 
 float soma(float a, float b);
 float subtrai(float a, float b);
@@ -6,12 +7,13 @@ float multiplica(float a, float b);
 float divide(float a, float b);
 
 int main() {
+    SetConsoleOutputCP(CP_UTF8);
     int opcao;
     float n1, n2;
 
     printf("--- CALCULADORA ---\n");
-    printf("1 - Soma\n2 - Subtracao\n3 - Multiplicacao\n4 - Divisao\n");
-    printf("Escolha a operacao: ");
+    printf("1 - Soma\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n");
+    printf("Escolha a operação: ");
     scanf("%d", &opcao);
 
     printf("Digite o primeiro operando: ");
@@ -27,10 +29,10 @@ int main() {
             if (n2 != 0) {
                 printf("Resultado: %.2f\n", divide(n1, n2));
             } else {
-                printf("Erro: Divisao por zero!\n");
+                printf("Erro: Divisão por zero!\n");
             }
             break;
-        default: printf("Erro: Opcao invalida!\n");
+        default: printf("Erro: Opção inválida!\n");
     }
     return 0;
 }

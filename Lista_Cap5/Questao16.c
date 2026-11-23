@@ -1,16 +1,18 @@
 #include <stdio.h>
+#include <windows.h>
 
 int ehBissexto(int ano);
 
 int main() {
+    SetConsoleOutputCP(CP_UTF8);
     int ano;
     printf("Digite um ano: ");
     scanf("%d", &ano);
 
     if (ehBissexto(ano)) {
-        printf("%d e um ano bissexto.\n", ano);
+        printf("%d é um ano bissexto.\n", ano);
     } else {
-        printf("%d nao e um ano bissexto.\n", ano);
+        printf("%d não é um ano bissexto.\n", ano);
     }
     return 0;
 }

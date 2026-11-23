@@ -1,19 +1,21 @@
 #include <stdio.h>
+#include <windows.h>
 
 int ehPrimo(int n);
 
 int main() {
+    SetConsoleOutputCP(CP_UTF8);
     int n, i;
-    printf("Digite um numero inteiro: ");
+    printf("Digite um número inteiro: ");
     scanf("%d", &n);
 
     if (ehPrimo(n)) {
-        printf("%d e primo.\n", n);
+        printf("%d é primo.\n", n);
     } else {
-        printf("%d nao e primo.\n", n);
+        printf("%d não é primo.\n", n);
     }
 
-    printf("Primos de 1 ate 50: ");
+    printf("Primos de 1 até 50: ");
     for (i = 1; i <= 50; i++) {
         if (ehPrimo(i)) {
             printf("%d ", i);
